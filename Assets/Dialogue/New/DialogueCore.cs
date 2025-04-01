@@ -6,32 +6,24 @@ using TMPro;
 
 public class DialogueCore : MonoBehaviour
 {
-    public TextMeshProUGUI textComponent;
-
     // these should not be available in the editor but are used in different scripts
     [HideInInspector]
     public int index = 0;
-
     [HideInInspector]
     public bool lineComplete;
 
-    public float textSpeed;
+    public float defaultTextSpeed;
 
     // variable for the conversation lines themself
     [TextArea]
     public string[] lines;
 
+    public TextMeshProUGUI textComponent;
+
     public UnityEvent OnNextCharacter;
-    public UnityEvent OnNextLine;
     public UnityEvent OnTypeLine;
 
     private void Start()
-    {
-        textComponent.text = string.Empty;
-        StartDialogue();
-    }
-
-    private void StartDialogue()
     {
         StartCoroutine(TypeLine());
     }
@@ -45,10 +37,15 @@ public class DialogueCore : MonoBehaviour
     {
         OnTypeLine.Invoke();
 
-        foreach (char c in lines[index].ToCharArray())
+        string rawLine = lines[index];
+
+        List<(char, float)> parsedText = DialogueSpeed.Parse(rawLine, defaultTextSpeed);
+        textComponent.text = string.Empty;
+
+        foreach (var (character, charSpeed) in parsedText)
         {
-            textComponent.text += c;
-            yield return new WaitForSeconds(textSpeed);
+            textComponent.text += character;
+            yield return new WaitForSeconds(charSpeed);
             OnNextCharacter.Invoke();
         }
     }
@@ -58,32 +55,29 @@ public class DialogueCore : MonoBehaviour
         if (index < lines.Length - 1)
         {
             index++;
-            textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
         else
         {
             Debug.Log("Dialogue is complete");
         }
-
-        OnNextLine.Invoke();
     }
 
     public void OnNextLinePressed()
     {
-        if (textComponent.text == lines[index])
+        if (textComponent.text == DialogueSpeed.RemoveTags(lines[index]))
         {
             NextLine();
         }
         else
         {
             StopAllCoroutines();
-            textComponent.text = lines[index];
+            textComponent.text = DialogueSpeed.RemoveTags(lines[index]);
         }
     }
     private void IsLineComplete()
     {
-        if (textComponent.text == lines[index])
+        if (textComponent.text == DialogueSpeed.RemoveTags(lines[index]))
         {
             lineComplete = true;
         }

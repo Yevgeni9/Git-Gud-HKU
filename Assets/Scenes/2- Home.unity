@@ -903,11 +903,6 @@ GameObject:
   - component: {fileID: 600784849}
   - component: {fileID: 600784851}
   - component: {fileID: 600784850}
-  - component: {fileID: 600784852}
-  - component: {fileID: 600784856}
-  - component: {fileID: 600784853}
-  - component: {fileID: 600784854}
-  - component: {fileID: 600784855}
   - component: {fileID: 600784857}
   - component: {fileID: 600784858}
   - component: {fileID: 600784862}
@@ -915,6 +910,7 @@ GameObject:
   - component: {fileID: 600784860}
   - component: {fileID: 600784859}
   - component: {fileID: 600784863}
+  - component: {fileID: 600784853}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -981,95 +977,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600784848}
   m_CullTransparentMesh: 1
---- !u!114 &600784852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600784848}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f91883e1cd207334c95503e10bb0b690, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textComponent: {fileID: 1129066865}
-  lines:
-  - '{speed=0.1} Nyx...'
-  - '{speed=0.08}When are we heading home?'
-  - Not yet, Luna
-  - '{speed=0.07}We have to keep going'
-  - '{speed=0.07}After coming this far we can''t go back anymore'
-  - '{speed=0.08}At least we are safe,{speed=0.8} {speed=0.12}for now...'
-  - '{speed=0.1}Nyx,'
-  - '{speed=0.09}Promise me you will never leave m{speed=0.7}e?'
-  - Please?
-  - I won't
-  - We will get through this,{speed=1} {speed=0.1}okay?
-  - '{speed=0.1}Okay-'
-  - ...
-  - We know you are in there open up!
-  - '!'
-  - Come on Luna we have to go!
-  defaultTextSpeed: 0.08
-  typingSound: {fileID: 600784853}
-  DoorBonk: {fileID: 600784854}
-  CampfireOut:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1809532548}
-        m_TargetAssemblyTypeName: FadeOuTcampfire, Assembly-CSharp
-        m_MethodName: OnRainFadeOut
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  pitchRanges:
-  - minPitch: 1
-    maxPitch: 1.2
-  - minPitch: 1
-    maxPitch: 1.2
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 1
-    maxPitch: 1.2
-  - minPitch: 1.1
-    maxPitch: 1.2
-  - minPitch: 1.1
-    maxPitch: 1.2
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 0.9
-    maxPitch: 1
-  - minPitch: 1
-    maxPitch: 1.2
-  - minPitch: 0
-    maxPitch: 0
-  - minPitch: 0.8
-    maxPitch: 0.9
-  - minPitch: 1
-    maxPitch: 1
-  - minPitch: 0.9
-    maxPitch: 1
-  color1: {r: 0, g: 0.5456042, b: 1, a: 1}
-  color2: {r: 0.6603774, g: 0, b: 0.21026945, a: 1}
-  color3: {r: 1, g: 1, b: 1, a: 1}
-  color1Indices: 00000000010000000600000007000000080000000b000000
-  color2Indices: 02000000030000000400000005000000090000000a0000000e0000000f000000
-  color3Indices: 0c0000000d000000
-  animator: {fileID: 1474305368}
-  icon: {fileID: 1993474827}
 --- !u!82 &600784853
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1083,294 +990,6 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: f4d0c4d19b840f341a2c2918794d0945, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &600784854
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600784848}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0e0dab92654211f4a874165845cd2d17, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &600784855
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600784848}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!82 &600784856
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600784848}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 942019cf9ecd5854ebeb343b12b7f779, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1469,15 +1088,18 @@ MonoBehaviour:
   textComponent: {fileID: 1129066865}
   index: 0
   lineComplete: 0
-  textSpeed: 0.08
+  defaultTextSpeed: 0.1
   lines:
-  - Dit is een test voor het dialoog
-  - Voor project Git Gud
-  - Iedere spreker krijgt zijn eigen pitch
-  - En een andere kleur
-  - Binnenkort veranderd de snelheid dynamisch
-  - Maar in deze build is alles laten zien
-  - Einde
+  - Dit is een test voor dialoog
+  - Hier horen verschillende functies bij
+  - Zoals iedere spreker een eigen sfx en pitch geven
+  - Ook krijgt iedere spreker een eigen kleur
+  - Zoals hier!
+  - Ook kan de snelheid aangepast worden
+  - '{speed=0.08} zoals hier,{speed=1} {speed=0.15} of hier...'
+  - Ook is er een icoontje wanneer de regel klaar is
+  - Maar,{speed=0.8} {speed=0.1} dit is niet zo spannend. {speed=0.8} {speed=0.11}Toch?
+  - Test3
   OnNextCharacter:
     m_PersistentCalls:
       m_Calls:
@@ -1493,9 +1115,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  OnNextLine:
-    m_PersistentCalls:
-      m_Calls: []
   OnTypeLine:
     m_PersistentCalls:
       m_Calls:
@@ -1525,20 +1144,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueSFX: {fileID: 600784853}
   pitchRanges:
-  - minPitch: 0.8
+  - minPitch: 1
+    maxPitch: 1
+  - minPitch: 1
     maxPitch: 1
   - minPitch: 0.8
     maxPitch: 1
   - minPitch: 0.8
     maxPitch: 1
   - minPitch: 1
-    maxPitch: 1.3
+    maxPitch: 1.25
   - minPitch: 0.8
     maxPitch: 1
   - minPitch: 0.8
     maxPitch: 1
-  - minPitch: 1.2
-    maxPitch: 1.4
+  - minPitch: 0.8
+    maxPitch: 1
+  - minPitch: 0.8
+    maxPitch: 1
+  - minPitch: 0.8
+    maxPitch: 1
 --- !u!114 &600784859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,7 +1177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0.5392548, b: 0.8962264, a: 1}
-  indices: 03000000
+  indices: 04000000
 --- !u!114 &600784860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1566,7 +1191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.745283, g: 0, b: 0.17198834, a: 1}
-  indices: 0000000001000000020000000400000005000000
+  indices: 030000000b0000000500000006000000070000000800000009000000
 --- !u!114 &600784861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,8 +1233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b21a774f2592a949a1ab64a712f53ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 0.754717, b: 0.05031442, a: 1}
-  indices: 06000000
+  color: {r: 1, g: 1, b: 1, a: 1}
+  indices: 000000000100000002000000710000006f00000070000000
 --- !u!1001 &612731388
 PrefabInstance:
   m_ObjectHideFlags: 0

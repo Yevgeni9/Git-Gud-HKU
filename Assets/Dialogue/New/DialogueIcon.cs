@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using System;
 
-// icon appears when line ends, useful for showing the keybind for the next line
+// icon will appear when line ends, useful for showing the keybind for the next line
 [RequireComponent(typeof(DialogueCore))]
 public class DialogueIcon : MonoBehaviour
 {

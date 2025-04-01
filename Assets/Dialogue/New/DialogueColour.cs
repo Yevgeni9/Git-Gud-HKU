@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// for if you want to change the colours of the text
+// for if you want to change the colours of the dialogue text
 [RequireComponent(typeof(DialogueCore))]
 public class DialogueColour : MonoBehaviour
 {
@@ -24,6 +24,7 @@ public class DialogueColour : MonoBehaviour
                 return mapping.color;
             }
         }
+
         return Color.white;
     }
 

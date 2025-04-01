@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// plays a sfx for every character in dialogue
 [RequireComponent(typeof(DialogueCore))]
 public class DialogueAudio : MonoBehaviour
 {
