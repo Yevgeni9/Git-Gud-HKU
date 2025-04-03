@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-// plays a sfx for every character in dialogue
+// plays a sfx with a random pitch for every character in dialogue
 [RequireComponent(typeof(DialogueCore))]
 public class DialogueAudio : MonoBehaviour
 {
@@ -23,7 +21,7 @@ public class DialogueAudio : MonoBehaviour
         dialogueCore = GameObject.Find("Dialogue").GetComponent<DialogueCore>();
     }
 
-    public void NextCharacter()
+    public void PlaySFX()
     {
         int currentIndex = dialogueCore.index;
         PitchRange currentPitchRange = pitchRanges[currentIndex];

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(DialogueColour))]
+[RequireComponent(typeof(DialogueColor))]
 [System.Serializable]
-public class ColourMapping : MonoBehaviour
+public class ColorMapping : MonoBehaviour
 {
     public Color color;
     public List<int> indices = new List<int>();

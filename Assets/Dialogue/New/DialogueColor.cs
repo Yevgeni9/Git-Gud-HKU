@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// for if you want to change the colours of the dialogue text
+// for if you want to change the color of the dialogue text
 [RequireComponent(typeof(DialogueCore))]
-public class DialogueColour : MonoBehaviour
+public class DialogueColor : MonoBehaviour
 {
     private DialogueCore dialogueCore;
-    public List<ColourMapping> colorMappings = new List<ColourMapping>();
+    public List<ColorMapping> colorMappings = new List<ColorMapping>();
 
-    // putting this in Start causes issues
     private void Awake()
     {
         dialogueCore = GameObject.Find("Dialogue").GetComponent<DialogueCore>();
@@ -28,7 +27,7 @@ public class DialogueColour : MonoBehaviour
         return Color.white;
     }
 
-    public void UpdateTextColour()
+    public void UpdateTextColor()
     {
         int currentIndex = dialogueCore.index;
         dialogueCore.textComponent.color = GetColorForIndex((int)currentIndex);

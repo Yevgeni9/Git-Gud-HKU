@@ -4,19 +4,13 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 
+// The core for the dialogue, on its own it will only convert strings and display them character for character
 public class DialogueCore : MonoBehaviour
 {
-    // these should not be available in the editor but are used in different scripts
-    [HideInInspector]
-    public int index = 0;
-    [HideInInspector]
-    public bool lineComplete;
-
+    [HideInInspector] public int index = 0;
+    [HideInInspector] public bool lineComplete;
+    [TextArea] public string[] lines; // variable for the conversation itself
     public float defaultTextSpeed;
-
-    // variable for the conversation lines themself
-    [TextArea]
-    public string[] lines;
 
     public TextMeshProUGUI textComponent;
 
@@ -63,18 +57,6 @@ public class DialogueCore : MonoBehaviour
         }
     }
 
-    public void OnNextLinePressed()
-    {
-        if (textComponent.text == DialogueSpeed.RemoveTags(lines[index]))
-        {
-            NextLine();
-        }
-        else
-        {
-            StopAllCoroutines();
-            textComponent.text = DialogueSpeed.RemoveTags(lines[index]);
-        }
-    }
     private void IsLineComplete()
     {
         if (textComponent.text == DialogueSpeed.RemoveTags(lines[index]))
@@ -84,6 +66,19 @@ public class DialogueCore : MonoBehaviour
         else
         {
             lineComplete = false;
+        }
+    }
+
+    public void OnNextLinePressed()
+    {
+        if (lineComplete)
+        {
+            NextLine();
+        }
+        else
+        {
+            StopAllCoroutines();
+            textComponent.text = DialogueSpeed.RemoveTags(lines[index]);
         }
     }
 }

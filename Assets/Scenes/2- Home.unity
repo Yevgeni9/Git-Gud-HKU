@@ -1085,27 +1085,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1801c743bb194ec4f9293515055509b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textComponent: {fileID: 1129066865}
   index: 0
   lineComplete: 0
-  defaultTextSpeed: 0.1
   lines:
   - Dit is een test voor dialoog
-  - Hier horen verschillende functies bij
+  - Dit systeem heeft verschillende functies
   - Zoals iedere spreker een eigen sfx en pitch geven
   - Ook krijgt iedere spreker een eigen kleur
   - Zoals hier!
   - Ook kan de snelheid aangepast worden
   - '{speed=0.08} zoals hier,{speed=1} {speed=0.15} of hier...'
   - Ook is er een icoontje wanneer de regel klaar is
-  - Maar,{speed=0.8} {speed=0.1} dit is niet zo spannend. {speed=0.8} {speed=0.11}Toch?
-  - Test3
+  - Dit systeem is modulair opgebouwd
+  - Dus de functionaliteit uitbreiden gaat makkelijk
+  - Einde
+  defaultTextSpeed: 0.1
+  textComponent: {fileID: 1129066865}
   OnNextCharacter:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 600784858}
         m_TargetAssemblyTypeName: DialogueAudio, Assembly-CSharp
-        m_MethodName: NextCharacter
+        m_MethodName: PlaySFX
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1119,8 +1120,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 600784861}
-        m_TargetAssemblyTypeName: DialogueColour, Assembly-CSharp
-        m_MethodName: UpdateTextColour
+        m_TargetAssemblyTypeName: DialogueColor, Assembly-CSharp
+        m_MethodName: UpdateTextColor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1164,6 +1165,8 @@ MonoBehaviour:
     maxPitch: 1
   - minPitch: 0.8
     maxPitch: 1
+  - minPitch: 1
+    maxPitch: 1.2
 --- !u!114 &600784859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1177,7 +1180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0, g: 0.5392548, b: 0.8962264, a: 1}
-  indices: 04000000
+  indices: 040000000a000000
 --- !u!114 &600784860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1234,7 +1237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 1, a: 1}
-  indices: 000000000100000002000000710000006f00000070000000
+  indices: 000000000100000002000000
 --- !u!1001 &612731388
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2794,11 +2797,6 @@ MonoBehaviour:
   selected: 0
   label: 
   handleScale: 0.3
---- !u!95 &1256308636 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 57cc2b6b66e4e0c4ea47d41bf47a0c6c, type: 3}
-  m_PrefabInstance: {fileID: 876337963}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1256308638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2811,7 +2809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0587924251c5284b915219da56db63b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1256308636}
 --- !u!114 &1269005798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3341,8 +3338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61d092c7b6e86ec4a99a4278079070ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 1474305373}
-  audioSource2: {fileID: 1474305374}
 --- !u!82 &1474305373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4304,9 +4299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d63a7e7672d1a0459e75ac7abe78563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Campfiresfx: {fileID: 1809532546}
-  targetVolume: 0.2
-  fadeDuration: 2
 --- !u!114 &1821761822
 MonoBehaviour:
   m_ObjectHideFlags: 0

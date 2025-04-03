@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text.RegularExpressions;
 
 // for changing the speed dynamically
+// use {speed=FLOAT} in the lines string to change the dialogue speed from that point
 public static class DialogueSpeed
 {
     private static readonly Regex speedRegex = new Regex(@"\{speed=(.*?)\}");
@@ -37,6 +38,7 @@ public static class DialogueSpeed
         return parsedText;
     }
 
+    // Cleans the tags in dialogue so that they wont appear in runtime
     public static string RemoveTags(string line)
     {
         return speedRegex.Replace(line, "");
